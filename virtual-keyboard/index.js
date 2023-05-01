@@ -126,8 +126,10 @@ function printKey(e) {
   }
 }
 function capsLock () {
-  let capsLock = document.querySelector('.key__caps-lock')
-  if (!capsLock.classList.contains('key_active')) {
+  let capsLock = document.querySelector('.key__caps-lock');
+  let rightShift = document.querySelector('.key__right-shift');
+  let leftShift = document.querySelector('.key__left-shift');
+  if (!capsLock.classList.contains('key_active') && !rightShift.classList.contains('key_active') && !leftShift.classList.contains('key_active')) {
     document.querySelector('.key__q').textContent = 'q';
     document.querySelector('.key__w').textContent = 'w';
     document.querySelector('.key__e').textContent = 'e';
@@ -254,11 +256,13 @@ document.addEventListener('keydown', function(e) {
     carPos++;
   } else if (eventKey == 'ShiftLeft') {
     document.querySelector(`.key__left-shift`).classList.add('key_active');
+    capsLock ();
   } else if (eventKey == 'ArrowUp') {
     document.querySelector(`.key__arr-up`).classList.add('key_active');
     carPos = kbText.selectionStart;
   } else if (eventKey == 'ShiftRight') {
     document.querySelector(`.key__right-shift`).classList.add('key_active');
+    capsLock ();
   } else if (eventKey == 'ControlLeft') {
     document.querySelector(`.key__left-ctrl`).classList.add('key_active');
   } else if (eventKey == 'MetaLeft') {
@@ -318,11 +322,13 @@ document.addEventListener('keyup', function(e) {
   } else if (eventKey == 'Quote') {
     setTimeout(() => document.querySelector(`.key__apostrophe`).classList.remove('key_active'), 200);
   } else if (eventKey == 'ShiftLeft') {
-    setTimeout(() => document.querySelector(`.key__left-shift`).classList.remove('key_active'), 200);
+    document.querySelector(`.key__left-shift`).classList.remove('key_active');
+    capsLock ();
   } else if (eventKey == 'ArrowUp') {
     setTimeout(() => document.querySelector(`.key__arr-up`).classList.remove('key_active'), 200);
   } else if (eventKey == 'ShiftRight') {
-    setTimeout(() => document.querySelector(`.key__right-shift`).classList.remove('key_active'), 200);
+    document.querySelector(`.key__right-shift`).classList.remove('key_active');
+    capsLock ();
   } else if (eventKey == 'ControlLeft') {
     setTimeout(() => document.querySelector(`.key__right-shift`).classList.remove('key_active'), 200);
   } else if (eventKey == 'AltLeft') {
