@@ -27,6 +27,9 @@ function functionKey(e) {
     if (carPos < kbText.value.length) carPos++;
   } else if (e.target.classList.contains('key__arr-left')) {
     if (carPos > 0) carPos--;
+  } else if (e.target.classList.contains('key__caps-lock')) {
+    document.querySelector('.key__caps-lock').classList.toggle('key_active')
+    capsLock();
   } else if (e.target.classList.contains('key__arr-up')) {
     
     if (kbText.value.slice(0,carPos).indexOf('\n') !== -1) {
