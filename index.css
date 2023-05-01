@@ -1,0 +1,82 @@
+.keyboard {
+  max-width: 955px;
+  margin: 5em auto;
+}
+.keyboard__form {
+  margin-bottom: 20px;
+}
+.keyboard__textarea {
+  display: block;
+  margin: auto;
+  resize: vertical;
+  overflow: auto;
+}
+.keys__line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 13px;
+}
+.key {
+  width: 5.557%;
+  height: 53px;
+  background-color: #575463;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.key__backquote,
+.key-functional {
+  background-color: #3e3d41;
+  color: #c0c0c0;
+}
+.key:hover {
+  background-color: #7f6cca;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.key:active,
+.key_active {
+  background-color: #6352a7;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.key-1str {
+  line-height: 54px;
+  text-align: center;
+}
+.key-2str {
+  position: relative;
+  display: flex;
+}
+.key sup {
+  position: absolute;
+  top: 9%;
+  left: 9%;
+  font-size: 0.7em;
+}
+.key p {
+  margin: auto;
+}
+.key__backspace,
+.key__caps-lock,
+.key__left-shift {
+  width: 14.141%;
+}
+.key__tab,
+.key__del {
+  width: 6.550%;
+}
+.key__enter {
+  width: 12.168%;
+}
+.key__left-ctrl,
+.key__right-ctrl {
+  width: 9.35%;
+}
+.key__space {
+  width: 39.581%; 
+}
