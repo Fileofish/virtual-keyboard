@@ -1,3 +1,10 @@
+document.addEventListener('DOMContentLoaded', function() {
+  let question = confirm('Хотите перейти в Pull request задания?');
+  if (question) {
+    window.location.href = 'https://github.com/Fileofish/virtual-keyboard/pull/2';
+  }
+})
+
 const kbText = document.querySelector('.keyboard__textarea');
 let carPos = kbText.selectionStart;
 let printPos;
